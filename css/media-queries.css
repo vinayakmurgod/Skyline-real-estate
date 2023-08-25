@@ -1,0 +1,908 @@
+/* Extra small devices (phones, 600px and down) */
+@media screen and (max-width: 600px) {
+  nav {
+    margin-top: 6%;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    padding: 8% 0;
+    color: #d05a00;
+    /* font-weight: 500; */
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+    margin: 1% 0 4%;
+  }
+
+  /* hero section */
+  #hero {
+    overflow: hidden;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(1px, 3px);
+    background: #fff;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    border-radius: 10px 0px 0 10px;
+    right: -385px;
+    width: 350px;
+    margin-top: 30%;
+    padding: 20px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    /* transform: translate(-100%, 0); */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 20px 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: translate(-100%, 0);
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: 15%;
+  }
+
+  .hero-text .heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-text .sub-heading {
+    font-size: small;
+  }
+
+  .hero-text .hero-stats ul {
+    font-size: 2rem;
+  }
+  .hero-text .hero-stats ul li {
+    width: 130px;
+  }
+
+  .hero-text .hero-stats ul li span {
+    font-size: 1.5rem;
+    color: #d05a00;
+  }
+
+  .hero-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 450px;
+    margin-bottom: 20%;
+  }
+
+  .hero-image .blur-bg {
+    -webkit-backdrop-filter: blur(10em);
+    backdrop-filter: blur(10rem);
+    padding: 4%;
+  }
+
+  .hero-image .blur-bg div {
+    overflow: hidden;
+    border-radius: 50% 50% 20px 20px;
+    height: 430px;
+  }
+
+  .hero-image img {
+    width: 1000px;
+  }
+
+  /* services section */
+
+  .services-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10% 0%;
+    text-align: center;
+  }
+  .services-list ul li img {
+    max-width: 80px;
+  }
+
+  .services-list ul li p {
+    color: #d05a00;
+    font-size: 0.9rem;
+    padding: 4%;
+  }
+
+  /* about-us section   */
+
+  #about-us {
+    flex-direction: column;
+    justify-content: left;
+    align-content: normal;
+    align-items: normal;
+  }
+
+  .aboout-text {
+    text-align: justify;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 10%;
+  }
+
+  .about-video {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-video iframe {
+    width: 100%;
+  }
+
+  /* properties section */
+
+  .properties-list ul {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    grid-auto-rows: minmax(200px, auto);
+    padding: 10% 0% 20%;
+  }
+
+  /* our value section  */
+
+  .our-value-picture {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    height: 450px;
+    margin: 10% 0 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg {
+    padding: 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg div {
+    height: 430px;
+  }
+
+  .our-value-picture .our-value-blur-bg div img {
+    width: 800px;
+  }
+
+  .our-value-text {
+    width: 100%;
+    margin-left: 0%;
+    padding: 2% 0% 10%;
+  }
+
+  .our-value-text .section-heading {
+    color: #fff;
+  }
+
+  .our-value-heading {
+    color: #3f3f4d;
+  }
+
+  .our-value-heading span {
+    color: #d05a00;
+  }
+
+  .our-value-sub-heading {
+    color: #6d6d6d;
+    padding-bottom: 6%;
+    font-size: 1rem;
+  }
+
+  .our-value-text ul li {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .our-value-text ul li p {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #6d6d6d;
+    font-weight: 200;
+    padding: 2% 0;
+  }
+
+  /* contact-us section */
+  #contact-us {
+    flex-direction: column;
+  }
+
+  #contact-us .section-title {
+    margin: 4% 0;
+  }
+
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-info div {
+    height: 230px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 8% 4%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0% 0 0;
+    margin: 20% 0;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* footer section */
+
+  footer {
+    flex-direction: column;
+    padding: 6% 4%;
+    height: 100px;
+  }
+
+  .social-links ul li img {
+    width: 20px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 768px) */
+@media only screen and (min-width: 600px) and (max-width: 768px) {
+  nav {
+    margin-top: 4%;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    padding: 8% 0;
+    color: #d05a00;
+    /* font-weight: 500; */
+  }
+
+  .section-heading {
+    font-size: 2.5rem;
+    margin: 1% 0 4%;
+  }
+
+  /* hero section */
+
+  #hero {
+    overflow: hidden;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle a {
+    text-decoration: none;
+    color: #232323;
+    transition: color 0.3s ease;
+  }
+
+  #menuToggle a:hover {
+    color: tomato;
+  }
+
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+
+  /*
+ * Just a quick hamburger
+ */
+  #menuToggle span {
+    display: block;
+    width: 40px;
+    height: 4px;
+    margin-bottom: 10px;
+    position: relative;
+    background: #cdcdcd;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  /* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(1px, 3px);
+    background: #fff;
+  }
+
+  /*
+ * But let's hide the middle one.
+ */
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  /*
+ * Ohyeah and the last one should go the other direction
+ */
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  /*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+  #menu {
+    position: absolute;
+    border-radius: 10px 0px 0 10px;
+    right: -400px;
+    width: 350px;
+    margin-top: 30%;
+    padding: 20px;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    /* transform: translate(-100%, 0); */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 20px 0;
+    font-size: 25px;
+    text-align: center;
+  }
+
+  /*
+ * And let's slide it in from the left
+ */
+  #menuToggle input:checked ~ ul {
+    transform: translate(-100%, 0);
+  }
+
+  .hero-text {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .hero-text .heading {
+    font-size: 3.5rem;
+  }
+
+  .hero-text .sub-heading {
+    font-size: small;
+  }
+
+  .hero-text .hero-stats ul {
+    font-size: 2rem;
+  }
+  .hero-text .hero-stats ul li {
+    width: 130px;
+  }
+
+  .hero-text .hero-stats ul li span {
+    font-size: 1.5rem;
+    color: #d05a00;
+  }
+
+  .hero-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 550px;
+    margin-bottom: 20%;
+  }
+
+  .hero-image .blur-bg {
+    -webkit-backdrop-filter: blur(10em);
+    backdrop-filter: blur(10rem);
+    padding: 2%;
+  }
+
+  .hero-image .blur-bg div {
+    overflow: hidden;
+    border-radius: 50% 50% 20px 20px;
+    height: 530px;
+  }
+
+  .hero-image img {
+    width: 1000px;
+  }
+
+  /* services section */
+
+  .services-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10% 0%;
+    text-align: center;
+  }
+  .services-list ul li img {
+    max-width: 80px;
+  }
+
+  .services-list ul li p {
+    color: #d05a00;
+    font-size: 1rem;
+    padding: 4%;
+  }
+
+  /* about-us section   */
+
+  #about-us {
+    flex-direction: column;
+    justify-content: left;
+    align-content: normal;
+    align-items: normal;
+  }
+
+  .aboout-text {
+    text-align: justify;
+    width: 100%;
+    font-size: 0.9rem;
+    margin-bottom: 10%;
+  }
+
+  .about-video {
+    width: 100%;
+    text-align: left;
+  }
+
+  .about-video iframe {
+    width: 100%;
+  }
+
+  /* properties section */
+
+  .properties-list ul {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(200px, auto);
+    padding: 10% 0% 10%;
+  }
+
+  /* our value section  */
+
+  .our-value-picture {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 550px;
+    margin: 10% 0 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg {
+    padding: 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg div {
+    height: 520px;
+  }
+
+  .our-value-picture .our-value-blur-bg div img {
+    width: 800px;
+  }
+
+  .our-value-text {
+    width: 100%;
+    margin-left: 0%;
+    padding: 2% 0% 10%;
+  }
+
+  .our-value-text .section-heading {
+    color: #fff;
+  }
+
+  .our-value-heading {
+    color: #3f3f4d;
+  }
+
+  .our-value-heading span {
+    color: #d05a00;
+  }
+
+  .our-value-sub-heading {
+    color: #6d6d6d;
+    padding-bottom: 6%;
+    font-size: 1rem;
+  }
+
+  .our-value-text ul li {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .our-value-text ul li p {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #6d6d6d;
+    font-weight: 200;
+    padding: 2% 0;
+  }
+
+  /* contact-us section */
+  #contact-us {
+    flex-direction: column;
+  }
+
+  #contact-us .section-title {
+    margin: 4% 0;
+  }
+
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-info div {
+    height: 230px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 8% 4%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0% 0 0;
+    margin: 20% 0;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* footer section */
+
+  footer {
+    flex-direction: column;
+    padding: 6% 4%;
+    height: 100px;
+  }
+
+  .social-links ul li img {
+    width: 20px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and 992px) */
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  /* hero section */
+
+  .hero-text {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+
+  .hero-text .heading {
+    font-size: 4.5rem;
+  }
+
+  .hero-image {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 550px;
+    margin-bottom: 20%;
+    z-index: 1;
+  }
+
+  .hero-image .blur-bg {
+    z-index: 1;
+    -webkit-backdrop-filter: blur(10em);
+    backdrop-filter: blur(10rem);
+    padding: 2%;
+  }
+
+  .hero-image .blur-bg div {
+    overflow: hidden;
+    border-radius: 50% 50% 20px 20px;
+    height: 530px;
+  }
+
+  .hero-image img {
+    width: 1000px;
+  }
+
+  /* services section */
+
+  .services-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(100px, auto);
+    padding: 10% 0%;
+    text-align: center;
+  }
+  .services-list ul li img {
+    max-width: 80px;
+  }
+
+  .services-list ul li p {
+    color: #d05a00;
+    font-size: 1rem;
+    padding: 4%;
+  }
+
+  /* about-us section   */
+
+  #about-us {
+    flex-direction: column;
+    justify-content: left;
+    align-content: normal;
+    align-items: normal;
+  }
+
+  .aboout-text {
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 8%;
+  }
+
+  .about-video {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8%;
+  }
+
+  /* properties section */
+
+  .properties-list ul {
+    display: grid;
+    position: relative;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    grid-auto-rows: minmax(200px, auto);
+    padding: 10% 0% 10%;
+  }
+
+  /* our value section  */
+
+  .our-value-picture {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: 550px;
+    margin: 10% 0 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg {
+    padding: 4%;
+  }
+
+  .our-value-picture .our-value-blur-bg div {
+    height: 520px;
+  }
+
+  .our-value-picture .our-value-blur-bg div img {
+    width: 800px;
+  }
+
+  .our-value-text {
+    width: 100%;
+    margin-left: 0%;
+    padding: 2% 0% 10%;
+  }
+
+  .our-value-text .section-heading {
+    color: #fff;
+  }
+
+  .our-value-heading {
+    color: #3f3f4d;
+  }
+
+  .our-value-heading span {
+    color: #d05a00;
+  }
+
+  .our-value-sub-heading {
+    color: #6d6d6d;
+    padding-bottom: 6%;
+    font-size: 1rem;
+  }
+
+  .our-value-text ul li {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .our-value-text ul li p {
+    display: inline-block;
+    font-size: 0.8rem;
+    color: #6d6d6d;
+    font-weight: 200;
+    padding: 2% 0;
+  }
+
+  /* contact-us section */
+  #contact-us {
+    flex-direction: column;
+  }
+
+  #contact-us .section-title {
+    margin: 4% 0;
+  }
+
+  .contact-info {
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .contact-info div {
+    height: 230px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 8% 4%;
+  }
+
+  .contact-form {
+    width: 100%;
+    padding: 0% 0 0;
+    margin: 20% 0;
+  }
+
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
